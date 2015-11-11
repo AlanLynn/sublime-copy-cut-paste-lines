@@ -1,4 +1,4 @@
-# Copy, Cut, and Paste Lines for Sublime Text
+## Copy Cut and Paste Lines - Package for Sublime Text
 
 The purpose of this package is to improve your coding efficiency.
 
