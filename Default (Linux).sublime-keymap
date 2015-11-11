@@ -1,0 +1,11 @@
+[
+	// Steal the default copy/cut/paste/duplicate key bindings.
+	{ "keys": ["ctrl+c"], "command": "ccpl_copy" },
+	{ "keys": ["ctrl+x"], "command": "ccpl_cut" },
+	{ "keys": ["ctrl+v"], "command": "ccpl_paste" },
+	{ "keys": ["ctrl+shift+d"], "command": "ccpl_duplicate" },
+	// Create backup key bindings for the original copy/cut/paste in case they are needed.
+	{ "keys": ["ctrl+alt+c"], "command": "copy" },
+	{ "keys": ["ctrl+alt+x"], "command": "cut" },
+	{ "keys": ["ctrl+alt+v"], "command": "paste" }
+]

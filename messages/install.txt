@@ -1,0 +1,22 @@
+Thank you for installing Copy, Cut, and Paste Lines.
+
+This package attempts to improve your coding efficiency by making Copy, Cut, and Paste always operate on full lines of code. The only exception to this is a selection within a single line - in this case, copy and cut will behave as normal, affecting only the selected text.
+
+The default shortcuts for Copy, Cut, Paste, and Duplicate lines have been rebound to the "improved" versions contained in this package.
+
+If you need to use the original copy/cut/paste, use the Edit menu, or these key bindings:
+	Original Copy:  Ctrl+Alt+C
+	Original Cut:   Ctrl+Alt+X
+	Original Paste: Ctrl+Alt+V
+
+If you want to change any key bindings, paste the code below in "Key Bindings - User", and edit the keys to your liking.
+	// Key bindings for the "improved" copy, cut, paste, and duplicate commands:
+	{ "keys": ["ctrl+c"], "command": "ccpl_copy" },
+	{ "keys": ["ctrl+x"], "command": "ccpl_cut" },
+	{ "keys": ["ctrl+v"], "command": "ccpl_paste" },
+	{ "keys": ["ctrl+shift+d"], "command": "ccpl_duplicate" },
+	// Key bindings for the original copy, cut, paste, and duplicate commands:
+	{ "keys": ["ctrl+alt+c"], "command": "copy" },
+	{ "keys": ["ctrl+alt+x"], "command": "cut" },
+	{ "keys": ["ctrl+alt+v"], "command": "paste" },
+	{ "keys": [""], "command": "duplicate_lines" },
