@@ -15,7 +15,6 @@ If you don't like these bindings, set your own in Key Bindings - User. (See sect
 ### Demonstration
 
 Cutting and pasting lines:  
-(Image: Cutting and pasting lines)
 ![Demonstration gif](http://alanlynn.github.io/copy-cut-paste-lines-sublime/demo.gif)
 
 
