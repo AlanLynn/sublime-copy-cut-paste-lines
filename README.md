@@ -2,10 +2,7 @@
 
 The purpose of this package is to improve your coding efficiency.
 
-It does that by replacing the default Copy, Cut, and Paste with new versions that operate on full lines of code. Because moving lines of codes is such a common operation, making it even a little easier has a big benefit.
-
-*Wait, I don't want to copy/cut the whole line every time!*  
-Don't worry, selections within a single line are treated normally, copying and cutting just the selection, not the whole line.
+It does that by replacing the default Copy, Cut, and Paste with new versions that treat partially selected lines of code as fully selected. This makes it easier to copy/cut/paste full lines of code. And because moving lines of codes is such a common operation, making it even a little easier has a big benefit.
 
 And in case you need to use the original versions of copy/cut/paste, they are bound to new shorctuts.  
 Original Copy: <kbd>Ctrl+Alt+C</kbd> Original Cut: <kbd>Ctrl+Alt+X</kbd> Original Paste: <kbd>Ctrl+Alt+V</kbd>  
