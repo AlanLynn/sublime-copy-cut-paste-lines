@@ -2,12 +2,9 @@
 
 The purpose of this package is to improve your coding efficiency.
 
-It does that by replacing the default Copy, Cut, and Paste with new versions that operate on full lines of code. Because moving lines of codes is such a common operation, making it even a little easier has a big benefit.
+It does that by replacing the default Copy, Cut, and Paste with new versions that treat partially selected lines of code as fully selected. This makes it easier to copy/cut/paste full lines of code. And because moving lines of codes is such a common operation, making it even a little easier has a big benefit.
 
-*Wait, I don't want to copy/cut the whole line every time!*  
-Don't worry, selections within a single line are treated normally, copying and cutting just the selection, not the whole line.
-
-And in case you need to use the original versions of copy/cut/paste, they are bound to new shorctuts.  
+In case you need to use the original versions of copy/cut/paste, they are bound to new shorctuts.  
 Original Copy: <kbd>Ctrl+Alt+C</kbd> Original Cut: <kbd>Ctrl+Alt+X</kbd> Original Paste: <kbd>Ctrl+Alt+V</kbd>  
 If you don't like these bindings, set your own in Key Bindings - User. (See section [Rebinding Keys](#rebinding-keys).)
 
@@ -29,7 +26,7 @@ Cutting and pasting lines:
 1. Install [Package Control](https://packagecontrol.io/installation) if you do not already have it.
 2. In Sublime Text, open the Package Control command pallete. (Preferences → Package Control)
 3. Select "Install Package".
-4. Search for Copy, Cut, and Paste Lines and select it.
+4. Search for Copy Cut and Paste Lines, and select it.
 
 
 ### Rebinding Keys
