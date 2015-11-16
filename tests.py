@@ -9,7 +9,7 @@ To run the tests:
 import sublime, sublime_plugin
 import operator
 import traceback
-import CopyCutAndPasteLines.main
+CopyCutAndPasteLines = __import__('Copy Cut and Paste Lines.main')
 
 
 class CcplRunTestsCommand(sublime_plugin.WindowCommand):
