@@ -8,13 +8,21 @@ Note: For selections within a single line, commands work as normal, operating
 import sublime, sublime_plugin
 
 
+class ExpandedRegion(sublime.Region):
+    """Adds original_regions - the regions that were expanded into this."""
+    def __init__(self, region, original_region=None):
+        self.a = region.a
+        self.b = region.b
+        self.xpos = region.xpos
+        self.original_regions = []
+        if original_region != None:
+            self.original_regions.append(original_region)
+
+
 def get_expanded_selection(view):
     """Returns the selection expanded to full lines.
 
-    Returns an array of Regions. (Because a sublime.Selection cannot be used
-        without actually selecting text.)
-    Each Region returned will have a list of the original regions contained
-        within, as region.original_regions
+    Returns a list of ExpandedRegion.
     """
     if len(view.sel()) == 0:
         # Null selection
@@ -23,7 +31,7 @@ def get_expanded_selection(view):
     previous_expanded_region_end = -1
     # Expand all regions to the full lines containing them.
     for region in view.sel():
-        expanded_region = view.full_line(region)
+        expanded_region = ExpandedRegion(view.full_line(region), region)
         if expanded_region.begin() < previous_expanded_region_end:
             # Merge overlapping selections.
             new_region = expanded_selection[-1].cover(expanded_region)
@@ -33,7 +41,6 @@ def get_expanded_selection(view):
             # Append another original region.
             expanded_selection[-1].original_regions.append(region)
         else:
-            expanded_region.original_regions = [region]
             expanded_selection.append(expanded_region)
         previous_expanded_region_end = expanded_region.end()
     return expanded_selection
@@ -285,3 +292,5 @@ class CcplDuplicateCommand(sublime_plugin.TextCommand):
 
         # Remove the extra newline that was added earlier.
         view.erase(edit, sublime.Region(view.size() - 1, view.size()))
+
+
